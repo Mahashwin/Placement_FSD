@@ -87,3 +87,37 @@ arrow = (studet)=>{
     return studet[0]
 }
 console.log(arrow(["maha","ashwin","jayaanth"]))
+
+//destructing operator
+console.log(".............Destructing operator..................")
+var mark=[10,20,30]
+var [m1,m2,m3] = mark
+console.log(m1,m2,m3)
+
+//ternary
+console.log(".............Ternary operator..................")
+a=10
+console.log((a%2==0)?"Even":"odd")
+
+//spread operator
+console.log(".............Sprad operator..................")
+arr=["maha","ashwin","jayaanth","jana","kishore"]
+arr1=["mathav","kamalesh"]
+console.log(...arr,...arr1)
+
+//rest operator
+console.log(".............rest operator..................")
+const [ar,br,...cr] = arr
+console.log(ar)
+console.log(br)
+console.log(cr)
+
+//scope
+console.log(".............Scope operator..................")
+var p=10
+{
+    let p=90
+    console.log(p)
+
+}
+console.log(p)
