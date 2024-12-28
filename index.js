@@ -75,7 +75,15 @@ console.log(obj1)
 //type 3
 const obj2 = new Object()
 obj2["Name"] = "jayaanth"
-obj2["Spouse_name"] = "Mean"
+obj2["Spouse_name"] = "kamalesh"
 obj2["Kid name"] = "jana" 
 
 console.log(obj2)
+
+
+
+//arrow function
+arrow = (studet)=>{
+    return studet[0]
+}
+console.log(arrow(["maha","ashwin","jayaanth"]))
