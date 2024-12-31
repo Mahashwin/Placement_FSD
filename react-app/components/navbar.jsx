@@ -4,7 +4,7 @@ import '../components/navbar.css'
 const Navbar = (props) => {
     return (
         <header>
-            <nav class="jii">
+            <nav className="jii">
                 <div >
                     <h1>{props.Name}</h1>
                 </div>
@@ -14,6 +14,8 @@ const Navbar = (props) => {
                         <li><a href="/contact">Contact</a></li>
                         <li><a href="/about">About</a></li>
                         <li><a href="/project">Project</a></li>
+                        <li><a href="/usestate">Usestate</a>
+                        </li>
                     </ul>
                 </div>
             </nav>

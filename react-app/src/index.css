@@ -70,4 +70,6 @@ button:focus-visible {
 
 :root {
   --background-image: url('/assets/ajyajaya.jpg');
+  /* bottom: 0; */
+
 }

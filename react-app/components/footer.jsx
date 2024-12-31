@@ -3,13 +3,13 @@ import '../components/footer.css';
 
 const Footer = () => {
   const handleReset = () => {
-    // Reset the form using its reference
     document.getElementById('form').reset();
   };
 
   return (
     <footer>
       <form id="form">
+        {/* <hr /> */}
         <h1>Footer</h1>
         <div class="row">
         <div class ="col">
