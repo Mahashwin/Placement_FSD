@@ -10,6 +10,8 @@ import im from '../src/assets/ajyajaya.jpg';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Footer from '../components/footer';
 import Usestate from '../components/usestate';
+import Useref from '../components/Useref';
+import UseContext from '../components/Usecontext';
 
 
 function App() {
@@ -30,6 +32,9 @@ function App() {
             <Route path="/project" element={<Project />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/usestate" element={<Usestate />} />
+            <Route path="/useref" element={<Useref/>}/>
+            <Route path="/usecontext" element={<UseContext/>}/>
+
           </Routes>
         </BrowserRouter>
         <Footer />

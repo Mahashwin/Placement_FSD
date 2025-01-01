@@ -16,6 +16,8 @@ const Navbar = (props) => {
                         <li><a href="/project">Project</a></li>
                         <li><a href="/usestate">Usestate</a>
                         </li>
+                        <li><a href="/useref">Useref</a></li>
+                        <li><a href="/usecontext">UseContext</a></li>
                     </ul>
                 </div>
             </nav>
