@@ -12,6 +12,7 @@ import Footer from '../components/footer';
 import Usestate from '../components/usestate';
 import Useref from '../components/Useref';
 import UseContext from '../components/Usecontext';
+import Usememo from '../components/Usememo';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route path="/usestate" element={<Usestate />} />
             <Route path="/useref" element={<Useref/>}/>
             <Route path="/usecontext" element={<UseContext/>}/>
+            <Route path="/usememo" element={<Usememo/>}/>
 
           </Routes>
         </BrowserRouter>

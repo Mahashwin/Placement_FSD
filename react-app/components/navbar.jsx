@@ -18,6 +18,7 @@ const Navbar = (props) => {
                         </li>
                         <li><a href="/useref">Useref</a></li>
                         <li><a href="/usecontext">UseContext</a></li>
+                        <li><a href="/usememo">Usememo</a></li>
                     </ul>
                 </div>
             </nav>
