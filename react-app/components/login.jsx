@@ -12,7 +12,7 @@ const Login = () => {
     console.log(data)
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3002/login", data);
+      const res = await axios.post("https://placement-fsd-8v0x.onrender.com/login", data);
       console.log(res.data.username);
       if (res.status === 200) {
         alert("Logged in Successfully...");

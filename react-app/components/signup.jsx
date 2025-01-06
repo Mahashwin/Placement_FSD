@@ -15,7 +15,7 @@ const Signup = () => {
         console.log(data);
         e.preventDefault();
         try {
-            const res = await axios.post("http://localhost:3002/sign", data)
+            const res = await axios.post("https://placement-fsd-8v0x.onrender.com/sign", data)
             if (res.status == 200) {
                 alert('User Created Successfully.!!')
                 navigate('/')
