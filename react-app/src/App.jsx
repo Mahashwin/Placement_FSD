@@ -27,20 +27,23 @@ function App() {
         // backgroundPosition: 'center',
         height: '100vh'
       }}>
-        <Navbar Name="Mahashwin Viswanathan" />
+        {/* <Navbar Name="Mahashwin Viswanathan" /> */}
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Login/>} />
+            <Route path="/" element={<Login />} />
             {/* <Route path="/about" element={<About />} /> */}
-            <Route path="/project" element={<Project />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/usestate" element={<Usestate />} />
-            <Route path="/useref" element={<Useref/>}/>
-            <Route path="/usecontext" element={<UseContext/>}/>
-            {/* <Route path="/usememo" element={<Usememo/>}/> */}
-            <Route path="/home" element={<Jayaanth/>} />
-            <Route path="/signup" element={<Signup/>} />
-
+            <Route path="/signup" element={<Signup />} />
+            <Route exact path="/navbar" element={<Navbar />} >
+            <Route index element={<Jayaanth />}/>
+              <Route path="project" element={<Project />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="usestate" element={<Usestate />} />
+              <Route path="useref" element={<Useref />} />
+              <Route path="usecontext" element={<UseContext />} />
+              {/* <Route path="/usememo" element={<Usememo/>}/> */}
+              {/* <Route path="/home" element={<Jayaanth/>} /> */}
+              
+            </Route>
           </Routes>
         </BrowserRouter>
         <Footer />

@@ -16,7 +16,7 @@ const Login = () => {
       console.log(res.data.username);
       if (res.status === 200) {
         alert("Logged in Successfully...");
-        navigate("/home");
+        navigate("/navbar");
         localStorage.setItem("k",res.data.username)
       } else {
         alert("Login failed.");

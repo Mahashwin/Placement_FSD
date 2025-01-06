@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router'
 import '../components/navbar.css'
 // import { Link } from 'react-router-dom'
 // var handleLogout=()=>{
@@ -16,21 +17,25 @@ const Navbar = () => {
                 </div>
                 <div>
                     <ul>
-                        {/* <li><a href="/">Login</a></li> */}
-                        <li><a href="/contact">Contact</a></li>
-                        {/* <li><a href="/about">About</a></li> */}
-                        <li><a href="/project">Project</a></li>
-                        <li><a href="/usestate">Usestate</a>
+                        <li><a href="/">Login</a></li>
+                        <li><a href="/navbar"></a>
                         </li>
-                        <li><a href="/useref">Useref</a></li>
-                        <li><a href="/usecontext">UseContext</a></li>
+                        <li><a href="/navbar/contact">Contact</a></li>
+                        {/* <li><a href="/about">About</a></li> */}
+                        {/* <li><a href="/navbar/project">Project</a></li> */}
+                        <li><a href="/navbar/usestate">Usestate</a>
+                        </li>
+                        <li><a href="/navbar/useref">Useref</a></li>
+                        <li><a href="/navbar/usecontext">UseContext</a></li>
                         {/* <li><a href="/usememo">Usememo</a></li> */}
-                        <li><a href="/home">Home</a></li>
+                        {/* <li><a href="/home">Home</a></li> */}
                         {/* <li><a href="/signup">Signup</a></li> */}
                     </ul>
                 </div>
             </nav>
+        <Outlet/>    
         </header>
+
     )
 }
 
