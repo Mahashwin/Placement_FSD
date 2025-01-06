@@ -13,6 +13,8 @@ import Usestate from '../components/usestate';
 import Useref from '../components/Useref';
 import UseContext from '../components/Usecontext';
 import Usememo from '../components/Usememo';
+import Login from '../components/login';
+import Signup from '../components/signup';
 
 
 function App() {
@@ -28,14 +30,16 @@ function App() {
         <Navbar Name="Mahashwin Viswanathan" />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Jayaanth />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/" element={<Login/>} />
+            {/* <Route path="/about" element={<About />} /> */}
             <Route path="/project" element={<Project />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/usestate" element={<Usestate />} />
             <Route path="/useref" element={<Useref/>}/>
             <Route path="/usecontext" element={<UseContext/>}/>
-            <Route path="/usememo" element={<Usememo/>}/>
+            {/* <Route path="/usememo" element={<Usememo/>}/> */}
+            <Route path="/home" element={<Jayaanth/>} />
+            <Route path="/signup" element={<Signup/>} />
 
           </Routes>
         </BrowserRouter>

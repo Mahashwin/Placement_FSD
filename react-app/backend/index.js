@@ -5,6 +5,8 @@ app.use(express.json())
 var mongoose = require("mongoose")
 var user_schema = require('./models/users')
 app.use(express.urlencoded({ extended: true }))
+var cors = require('cors')
+app.use(cors())
 const port = 3002
 
 mongoose.connect("mongodb://localhost:27017/FSD").then(() => {
@@ -20,7 +22,7 @@ app.get('/sign', (req, res) => {
     res.sendFile(path.join(__dirname, 'login.html'))
 })
 
-app.post('/sign', (req, res) => {
+app.post('/sign', async (req, res) => {
     console.log(req.body);
     // var { firstname, lastname, email } = req.body;
     // console.log(firstname, lastname, email);
@@ -33,7 +35,7 @@ app.post('/sign', (req, res) => {
     //     })
     try {
         var newuser = new user_schema(req.body)
-        newuser.save()
+        await newuser.save()
         console.log("user added successfully");
         res.status(200).send("user added successfully");
     }
@@ -52,6 +54,30 @@ app.get('/getsign', async (req, res) => {
         res.send(err)
     }
 })
+app.post('/login', async (req,res) =>{
+    var {email,password} = req.body;
+    console.log(email,password)
+    try{
+        var existinguser = await user_schema.findOne({email:email})
+        if(existinguser){
+            if(existinguser.password !== password){
+                res.status(404).json("Invalid Credentials")
+            }
+            else{
+                res.status(200).json({Message:"Login Successfully..",isLoggedin:true,username:existinguser.name})
+            }
+        }
+        else{
+            res.status(404).send("Create an Account...")
+        }
+    }
+    catch(err){
+        console.log(err)
+        res.status(404)
+    }
+})
+
+
 app.get("/json", (req, res) => {
     res.send("Hii this is JSON")
 })

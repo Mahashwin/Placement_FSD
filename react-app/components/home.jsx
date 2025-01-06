@@ -1,7 +1,11 @@
 import React from "react";
 import aj from '../src/assets/ajyajaya.jpg'
 import '../components/navbar.css'
+var handleLogout=()=>{
+    localStorage.clear("k")
+}
 const Jayaanth = (props) => {
+    // var User = localStorage.getItem("k")
     return (
         <>
             <div style={{
@@ -19,6 +23,8 @@ const Jayaanth = (props) => {
                     display: "flex",
                     justifyContent: "center"
                 }}>This is my Home page {props.Name}</h1>
+                <button onClick={handleLogout}><a href="\">Logout</a>
+                </button>
             </div>
             <img src={aj} alt="" />
         </>

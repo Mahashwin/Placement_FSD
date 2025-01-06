@@ -1,8 +1,8 @@
 var mongoose =require("mongoose")
 
 var userschema = mongoose.Schema({
-    firstname:String,
-    lastname:String,
+    name:String,
+    rollno:String,
     email:String,
     password:String
 })
