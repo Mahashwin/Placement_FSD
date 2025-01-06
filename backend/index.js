@@ -6,10 +6,11 @@ var mongoose = require("mongoose")
 var user_schema = require('./models/users')
 app.use(express.urlencoded({ extended: true }))
 var cors = require('cors')
+var env =require('dotenv').config()
 app.use(cors())
 const port = 3002
 
-mongoose.connect("mongodb://localhost:27017/FSD").then(() => {
+mongoose.connect(process.env.MONGO_URL).then(() => {
     console.log("MongoDb connected successfully");
 }).catch(() => {
     console.log("check your connection string");
